@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bard</title>
+    <link rel="shortcut icon" href="bard.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="title">
+                <p>Bard</p>
+                <div class="label">Experimental</div>
+            </div>
+            <div class="controls">
+                <button>
+                    <span class="material-symbols-outlined">history</span>
+                    <span class="tooltip">Actividad de Bard</span>
+                </button>
+                <button>
+                    <span class="material-symbols-outlined">help</span>
+                    <span class="tooltip">Ayuda</span>
+                </button>
+                <button>
+                    <span class="material-symbols-outlined">settings</span>
+                    <span class="tooltip">Ajustes</span>
+                </button>
+                <button><span class="material-symbols-outlined">apps</span></button>
+            </div>
+        </header>
+
+        <main>
+            <div class="sidebar">
+                <div class="controls">
+                    <button><span class="material-symbols-outlined">add</span> Nueva conversación</button>
+                    <button class="dark icon">
+                        <span class="material-symbols-outlined">restart_alt</span>
+                        <div class="tooltip">Restablecer chat</div>
+                    </button>
+                </div>
+                <p>Recientes</p>
+                <div class="chats">
+                    <div class="chat">
+                        <span class="material-symbols-outlined">chat_bubble</span>
+                        <p>Como centrar una div</p>
+                    </div>
+                    <div class="chat">
+                        <span class="material-symbols-outlined">chat_bubble</span>
+                        <p>Historia de la música</p>
+                    </div>
+                    <div class="chat">
+                        <span class="material-symbols-outlined">chat_bubble</span>
+                        <p>Los mejores parques en Argentina</p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>Provincia de Buenos Aires, Argentina.</p>
+                </div>
+            </div>
+            <div class="app">
+                <div class="chat">
+                    <div class="messages">
+                        <img src="bard.gif" width="32">
+                        <h1>¡Hola de nuevo!</h1>
+                        <p style="color: var(--secondary-font-color)">Dime cómo puedo ayudarte o inspírate con estas sugerencias.</p>
+                        <div class="suggestions">
+                            <div class="suggestion one">
+                                <p>Comprender</p>
+
+                                <button>Tendencias</button>
+                                <button>Significado de una palabra</button>
+                                <button>Conceptos científicos</button>
+                            </div>
+                            <div class="suggestion two">
+                                <p>Crear</p>
+
+                                <button>Plan de estudio de idiomas</button>
+                                <button>Síntesis de un concepto</button>
+                                <button>Eslóganes para mi tienda</button>
+                            </div>
+                            <div class="suggestion three">
+                                <p>Explorar</p>
+
+                                <button>Sugerencias para creadores de YouTube</button>
+                                <button>Los mejores parques en Argentina</button>
+                                <button>Frases en una lengua extranjera</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button>
+                            <span class="material-symbols-outlined">add_photo_alternate</span>
+                            <div class="tooltip">Subir imagen</div>
+                        </button>
+                        <div class="prompt-input">
+                            <div class="prompt-input-container">
+                                <input type="text" placeholder="Introduce una petición aquí" spellcheck="false">
+
+                                <button class="prompt-btn">
+                                    <span class="material-symbols-outlined">mic</span>
+                                    <div class="tooltip">Usar micrófono</div>
+                                </button>
+                            </div>
+                        </div>
+                        <button>
+                            <span class="material-symbols-outlined">send</span>
+                            <div class="tooltip">Enviar</div>
+                        </button>
+                    </div>
+                    <p style="color: var(--secondary-font-color); text-align: center; font-size: 12px;">Bard puede
+                        mostrar información inexacta, también sobre las personas, así que comprueba sus respuestas.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
