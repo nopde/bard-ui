@@ -53,8 +53,10 @@ header .title {
     flex: 1 1;
 }
 
-header .title p {
+header .title a {
     font-size: 24px;
+    text-decoration: none;
+    color: currentColor;
 }
 
 header .title .label {
@@ -215,19 +217,28 @@ main .sidebar .chats .chat:active {
 main .sidebar .footer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    font-size: 12px;
+    font-size: 14px;
     text-wrap: balance;
 }
 
 main .sidebar .footer p {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 main .sidebar .footer p::before {
     content: "•";
     font-weight: bold;
+    color: var(--main-color);
+}
+
+main .sidebar .footer p a {
+    color: var(--main-color);
+    text-decoration: dotted;
+    text-decoration-color: var(--main-color);
+    text-decoration-thickness: 1px;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
 }
 
 main .app {
