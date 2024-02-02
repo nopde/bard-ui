@@ -8,9 +8,16 @@
     <link rel="shortcut icon" href="bard.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="material/material.css" />
 
     <link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="material/material.woff2" as="font" type="font/woff2" crossorigin>
+
+    <link rel="preload" href="index.css" as="style" crossorigin>
+    <link rel="preload" href="material/material.css" as="style" crossorigin>
+
+    <link rel="preload" href="bard.gif" as="image" crossorigin>
+    <link rel="preload" href="bard.svg" as="image" crossorigin>
 </head>
 
 <body>
@@ -68,7 +75,7 @@
             <div class="app">
                 <div class="chat">
                     <div class="messages">
-                        <img src="bard.gif" width="32">
+                        <img src="bard.gif" width="32" height="32">
                         <h1>¡Hola de nuevo!</h1>
                         <p style="color: var(--secondary-font-color)">Dime cómo puedo ayudarte o inspírate con estas sugerencias.</p>
                         <div class="suggestions">
