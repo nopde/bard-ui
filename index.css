@@ -73,7 +73,7 @@ header .controls {
     gap: 10px;
 }
 
-header .controls button {
+header button {
     position: relative;
     font-size: inherit;
     display: flex;
@@ -89,11 +89,11 @@ header .controls button {
     transition: all .25s ease, filter 0s;
 }
 
-header .controls button:hover {
+header button:hover {
     background: rgba(255, 255, 255, 0.1);
 }
 
-header .controls button:active {
+header button:active {
     filter: brightness(0.9);
 }
 
@@ -132,6 +132,52 @@ main .sidebar {
     width: 350px;
     padding-inline: 15px;
     padding-bottom: 25px;
+}
+
+main .sidebar .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+main .sidebar .title a {
+    font-size: 24px;
+    text-decoration: none;
+    color: currentColor;
+}
+
+main .sidebar .title .label {
+    color: var(--main-color);
+    font-size: 14px;
+    padding: 2px 4px;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+}
+
+main .sidebar .title button {
+    position: relative;
+    width: fit-content;
+    color: var(--main-color);
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 10px;
+    background-color: rgb(20, 20, 20);
+    padding: 10px;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+main .sidebar .title button:hover {
+    filter: brightness(1.1);
+}
+
+main .sidebar .title button:active {
+    filter: brightness(0.9);
 }
 
 main .sidebar .controls {
@@ -423,9 +469,47 @@ main .app .chat .controls button:active {
     border-radius: 999px;
 }
 
+@media (min-width: 800px) {
+    #menu-btn-open {
+        display: none;
+    }
+    main .sidebar .title {
+        display: none;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        translate: -10px 0;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
 @media (max-width: 800px) {
+    main .sidebar .title {
+        display: flex;
+        opacity: 0;
+        translate: -10px 0;
+        animation: slideIn .25s .25s ease forwards;
+    }
+
     main .sidebar {
         display: none;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgb(30, 30, 30);
+        height: 100%;
+        z-index: 250;
+        padding-top: 15px;
+        opacity: 0;
+        translate: -10px 0;
+        animation: slideIn .25s ease forwards;
     }
 
     main .app {
